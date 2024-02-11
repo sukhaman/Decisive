@@ -11,14 +11,15 @@
 		A21BAD8B2B791322008D995C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BAD8A2B791322008D995C /* SceneDelegate.swift */; };
 		A21BAD922B791324008D995C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A21BAD912B791324008D995C /* Assets.xcassets */; };
 		A21BAD952B791324008D995C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A21BAD932B791324008D995C /* LaunchScreen.storyboard */; };
-		A21BADA02B791324008D995C /* DecisiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BAD9F2B791324008D995C /* DecisiveTests.swift */; };
-		A21BADAA2B791324008D995C /* DecisiveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BADA92B791324008D995C /* DecisiveUITests.swift */; };
-		A21BADAC2B791324008D995C /* DecisiveUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BADAB2B791324008D995C /* DecisiveUITestsLaunchTests.swift */; };
 		A21BADBC2B7918D7008D995C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BADBB2B7918D7008D995C /* LoginVC.swift */; };
 		A21BADC12B791CC8008D995C /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = A21BADC02B791CC8008D995C /* swiftgen.yml */; };
-		A21BADC42B791D4D008D995C /* UIViewController+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BADC32B791D4D008D995C /* UIViewController+Snapshot.swift */; };
-		A21BADC72B791FC7008D995C /* XCTestCase+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BADC62B791FC7008D995C /* XCTestCase+Snapshot.swift */; };
-		A21BADCB2B791FF5008D995C /* LoginSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BADCA2B791FF5008D995C /* LoginSnapshotTests.swift */; };
+		A21BADD42B792721008D995C /* LoginSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BADCA2B791FF5008D995C /* LoginSnapshotTests.swift */; };
+		A21BADD52B792726008D995C /* XCTestCase+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BADC62B791FC7008D995C /* XCTestCase+Snapshot.swift */; };
+		A21BADD62B79272B008D995C /* UIViewController+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BADC32B791D4D008D995C /* UIViewController+Snapshot.swift */; };
+		A21BADD82B7928C8008D995C /* DecisiveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BADD72B7928C8008D995C /* DecisiveUITests.swift */; };
+		A21BADDC2B79438F008D995C /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BADDB2B79438F008D995C /* CustomTextField.swift */; };
+		A21BADDE2B79440D008D995C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A21BADDD2B79440D008D995C /* Colors.xcassets */; };
+		A21BADE02B79459B008D995C /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BADDF2B79459B008D995C /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,15 +47,16 @@
 		A21BAD942B791324008D995C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A21BAD962B791324008D995C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A21BAD9B2B791324008D995C /* DecisiveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DecisiveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A21BAD9F2B791324008D995C /* DecisiveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecisiveTests.swift; sourceTree = "<group>"; };
 		A21BADA52B791324008D995C /* DecisiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DecisiveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A21BADA92B791324008D995C /* DecisiveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecisiveUITests.swift; sourceTree = "<group>"; };
-		A21BADAB2B791324008D995C /* DecisiveUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecisiveUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A21BADBB2B7918D7008D995C /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		A21BADC02B791CC8008D995C /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		A21BADC32B791D4D008D995C /* UIViewController+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Snapshot.swift"; sourceTree = "<group>"; };
 		A21BADC62B791FC7008D995C /* XCTestCase+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Snapshot.swift"; sourceTree = "<group>"; };
 		A21BADCA2B791FF5008D995C /* LoginSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSnapshotTests.swift; sourceTree = "<group>"; };
+		A21BADD72B7928C8008D995C /* DecisiveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecisiveUITests.swift; sourceTree = "<group>"; };
+		A21BADDB2B79438F008D995C /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		A21BADDD2B79440D008D995C /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		A21BADDF2B79459B008D995C /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,9 +116,8 @@
 		A21BAD9E2B791324008D995C /* DecisiveTests */ = {
 			isa = PBXGroup;
 			children = (
-				A21BADC82B791FDB008D995C /* Login */,
 				A21BADC22B791D10008D995C /* Helpers */,
-				A21BAD9F2B791324008D995C /* DecisiveTests.swift */,
+				A21BADC82B791FDB008D995C /* Login */,
 			);
 			path = DecisiveTests;
 			sourceTree = "<group>";
@@ -124,8 +125,7 @@
 		A21BADA82B791324008D995C /* DecisiveUITests */ = {
 			isa = PBXGroup;
 			children = (
-				A21BADA92B791324008D995C /* DecisiveUITests.swift */,
-				A21BADAB2B791324008D995C /* DecisiveUITestsLaunchTests.swift */,
+				A21BADD72B7928C8008D995C /* DecisiveUITests.swift */,
 			);
 			path = DecisiveUITests;
 			sourceTree = "<group>";
@@ -133,10 +133,12 @@
 		A21BADB82B791373008D995C /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				A21BADD92B792967008D995C /* ViewManager */,
 				A21BADC02B791CC8008D995C /* swiftgen.yml */,
 				A21BAD882B791322008D995C /* AppDelegate.swift */,
 				A21BAD8A2B791322008D995C /* SceneDelegate.swift */,
 				A21BAD912B791324008D995C /* Assets.xcassets */,
+				A21BADDD2B79440D008D995C /* Colors.xcassets */,
 				A21BAD932B791324008D995C /* LaunchScreen.storyboard */,
 				A21BAD962B791324008D995C /* Info.plist */,
 			);
@@ -182,6 +184,15 @@
 				A21BADCA2B791FF5008D995C /* LoginSnapshotTests.swift */,
 			);
 			path = SnapshotTests;
+			sourceTree = "<group>";
+		};
+		A21BADD92B792967008D995C /* ViewManager */ = {
+			isa = PBXGroup;
+			children = (
+				A21BADDB2B79438F008D995C /* CustomTextField.swift */,
+				A21BADDF2B79459B008D995C /* CustomButton.swift */,
+			);
+			path = ViewManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,10 +266,12 @@
 					};
 					A21BAD9A2B791324008D995C = {
 						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
 						TestTargetID = A21BAD842B791322008D995C;
 					};
 					A21BADA42B791324008D995C = {
 						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
 						TestTargetID = A21BAD842B791322008D995C;
 					};
 				};
@@ -289,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A21BAD952B791324008D995C /* LaunchScreen.storyboard in Resources */,
+				A21BADDE2B79440D008D995C /* Colors.xcassets in Resources */,
 				A21BAD922B791324008D995C /* Assets.xcassets in Resources */,
 				A21BADC12B791CC8008D995C /* swiftgen.yml in Resources */,
 			);
@@ -315,9 +329,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A21BADDC2B79438F008D995C /* CustomTextField.swift in Sources */,
 				A21BAD892B791322008D995C /* AppDelegate.swift in Sources */,
 				A21BADBC2B7918D7008D995C /* LoginVC.swift in Sources */,
 				A21BAD8B2B791322008D995C /* SceneDelegate.swift in Sources */,
+				A21BADE02B79459B008D995C /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,10 +341,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A21BADC72B791FC7008D995C /* XCTestCase+Snapshot.swift in Sources */,
-				A21BADC42B791D4D008D995C /* UIViewController+Snapshot.swift in Sources */,
-				A21BADA02B791324008D995C /* DecisiveTests.swift in Sources */,
-				A21BADCB2B791FF5008D995C /* LoginSnapshotTests.swift in Sources */,
+				A21BADD52B792726008D995C /* XCTestCase+Snapshot.swift in Sources */,
+				A21BADD62B79272B008D995C /* UIViewController+Snapshot.swift in Sources */,
+				A21BADD42B792721008D995C /* LoginSnapshotTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,8 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A21BADAC2B791324008D995C /* DecisiveUITestsLaunchTests.swift in Sources */,
-				A21BADAA2B791324008D995C /* DecisiveUITests.swift in Sources */,
+				A21BADD82B7928C8008D995C /* DecisiveUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +562,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = A5T33ABXDL;
@@ -557,6 +572,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = sukhdev.DecisiveTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Decisive.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Decisive";
@@ -568,6 +584,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = A5T33ABXDL;
@@ -587,6 +604,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = A5T33ABXDL;
@@ -595,6 +613,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = sukhdev.DecisiveUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Decisive;
@@ -605,6 +624,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = A5T33ABXDL;
