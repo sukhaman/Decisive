@@ -15,6 +15,7 @@
 		A21BADAA2B791324008D995C /* DecisiveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BADA92B791324008D995C /* DecisiveUITests.swift */; };
 		A21BADAC2B791324008D995C /* DecisiveUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BADAB2B791324008D995C /* DecisiveUITestsLaunchTests.swift */; };
 		A21BADBC2B7918D7008D995C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BADBB2B7918D7008D995C /* LoginVC.swift */; };
+		A21BADC12B791CC8008D995C /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = A21BADC02B791CC8008D995C /* swiftgen.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		A21BADA92B791324008D995C /* DecisiveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecisiveUITests.swift; sourceTree = "<group>"; };
 		A21BADAB2B791324008D995C /* DecisiveUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecisiveUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A21BADBB2B7918D7008D995C /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		A21BADC02B791CC8008D995C /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 		A21BADB82B791373008D995C /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				A21BADC02B791CC8008D995C /* swiftgen.yml */,
 				A21BAD882B791322008D995C /* AppDelegate.swift */,
 				A21BAD8A2B791322008D995C /* SceneDelegate.swift */,
 				A21BAD912B791324008D995C /* Assets.xcassets */,
@@ -254,6 +257,7 @@
 			files = (
 				A21BAD952B791324008D995C /* LaunchScreen.storyboard in Resources */,
 				A21BAD922B791324008D995C /* Assets.xcassets in Resources */,
+				A21BADC12B791CC8008D995C /* swiftgen.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
