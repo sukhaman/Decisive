@@ -20,6 +20,7 @@
 		A21BADDC2B79438F008D995C /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BADDB2B79438F008D995C /* CustomTextField.swift */; };
 		A21BADDE2B79440D008D995C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A21BADDD2B79440D008D995C /* Colors.xcassets */; };
 		A21BADE02B79459B008D995C /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BADDF2B79459B008D995C /* CustomButton.swift */; };
+		A21BADE32B79781C008D995C /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BADE22B79781C008D995C /* HTTPClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		A21BADDB2B79438F008D995C /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		A21BADDD2B79440D008D995C /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		A21BADDF2B79459B008D995C /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		A21BADE22B79781C008D995C /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		A21BAD872B791322008D995C /* Decisive */ = {
 			isa = PBXGroup;
 			children = (
+				A21BADE12B7954D8008D995C /* NetworkManager */,
 				A21BADB92B7918C8008D995C /* Login */,
 				A21BADB82B791373008D995C /* SupportingFiles */,
 			);
@@ -193,6 +196,14 @@
 				A21BADDF2B79459B008D995C /* CustomButton.swift */,
 			);
 			path = ViewManager;
+			sourceTree = "<group>";
+		};
+		A21BADE12B7954D8008D995C /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				A21BADE22B79781C008D995C /* HTTPClient.swift */,
+			);
+			path = NetworkManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,6 +342,7 @@
 			files = (
 				A21BADDC2B79438F008D995C /* CustomTextField.swift in Sources */,
 				A21BAD892B791322008D995C /* AppDelegate.swift in Sources */,
+				A21BADE32B79781C008D995C /* HTTPClient.swift in Sources */,
 				A21BADBC2B7918D7008D995C /* LoginVC.swift in Sources */,
 				A21BAD8B2B791322008D995C /* SceneDelegate.swift in Sources */,
 				A21BADE02B79459B008D995C /* CustomButton.swift in Sources */,
