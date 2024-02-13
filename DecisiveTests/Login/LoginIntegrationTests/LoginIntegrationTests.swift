@@ -12,7 +12,7 @@ class LoginIntegrationTests: XCTestCase {
     func test_loginVC_sendLoginRequestFailure() {
             // Arrange
             // Simulate an invalid URL
-            let request = URLRequest(url: URL(string: "invalid-url")!)
+        let request = URLRequest(url: LoginEndpoint.login.url)
             let module = LoginAPIClientStub()
             
             let expectation = XCTestExpectation(description: "Login request should fail")
@@ -37,7 +37,33 @@ class LoginIntegrationTests: XCTestCase {
             wait(for: [expectation], timeout: 5) // Adjust the timeout as needed
         }
     
-
+    func test_loginVC_sendLoginRequestSuccess() {
+            // Arrange
+            var request = URLRequest(url: LoginEndpoint.login.url)
+        request.httpMethod = "POST"
+            let module = LoginAPIClientStub()
+            
+            let expectation = XCTestExpectation(description: "Login request should fail")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            expectation.fulfill()
+        }
+            // Act
+            module.sendLoginRequest(from: request)
+                .sink(receiveCompletion: { completion in
+                    switch completion {
+                    case .finished:
+                     break
+                    case .failure(_):
+                        XCTFail("Login request should fail")
+                    }
+                }, receiveValue: { profile in
+                    XCTAssertNotNil(profile)
+                })
+                .store(in: &cancellables)
+            
+            // Wait for the expectation to be fulfilled
+            wait(for: [expectation], timeout: 5) // Adjust the timeout as needed
+        }
     
     // MARK: Helpers
     

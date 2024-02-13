@@ -24,6 +24,7 @@
 		A21BADE82B79822A008D995C /* LoginAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BADE72B79822A008D995C /* LoginAPIClient.swift */; };
 		A21BADEB2B798581008D995C /* LoginIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BADEA2B798581008D995C /* LoginIntegrationTests.swift */; };
 		A21BADED2B798A49008D995C /* LoginEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BADEC2B798A49008D995C /* LoginEndpoint.swift */; };
+		A21BADF02B79B36D008D995C /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BADEF2B79B36D008D995C /* UserProfile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		A21BADE72B79822A008D995C /* LoginAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPIClient.swift; sourceTree = "<group>"; };
 		A21BADEA2B798581008D995C /* LoginIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginIntegrationTests.swift; sourceTree = "<group>"; };
 		A21BADEC2B798A49008D995C /* LoginEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEndpoint.swift; sourceTree = "<group>"; };
+		A21BADEF2B79B36D008D995C /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 		A21BADB92B7918C8008D995C /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				A21BADEE2B79B362008D995C /* Model */,
 				A21BADE62B798208008D995C /* API */,
 				A21BADBA2B7918CD008D995C /* Views */,
 			);
@@ -221,6 +224,14 @@
 				A21BADEA2B798581008D995C /* LoginIntegrationTests.swift */,
 			);
 			path = LoginIntegrationTests;
+			sourceTree = "<group>";
+		};
+		A21BADEE2B79B362008D995C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A21BADEF2B79B36D008D995C /* UserProfile.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,6 +372,7 @@
 				A21BAD892B791322008D995C /* AppDelegate.swift in Sources */,
 				A21BADBC2B7918D7008D995C /* LoginVC.swift in Sources */,
 				A21BADE82B79822A008D995C /* LoginAPIClient.swift in Sources */,
+				A21BADF02B79B36D008D995C /* UserProfile.swift in Sources */,
 				A21BAD8B2B791322008D995C /* SceneDelegate.swift in Sources */,
 				A21BADED2B798A49008D995C /* LoginEndpoint.swift in Sources */,
 				A21BADE02B79459B008D995C /* CustomButton.swift in Sources */,

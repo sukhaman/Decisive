@@ -7,5 +7,5 @@ import Combine
 
 public protocol LoginAPIClient {
 
-    func sendLoginRequest(from request: URLRequest) -> AnyPublisher<Data,Error>
+    func sendLoginRequest(from request: URLRequest) -> AnyPublisher<UserProfile?,Error>
 }
