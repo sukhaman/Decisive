@@ -3,6 +3,7 @@
 //
 
 import UIKit
+import Combine
 
 class LoginVC: UIViewController {
     var backgroundAvatar = UIImageView(frame: .zero)
@@ -12,7 +13,12 @@ class LoginVC: UIViewController {
     var txtPassword = CustomTextField(placeholder: "Password")
     var btnLogin = CustomButton(backgroundColor: .appOrangePrimary, title: "Sign In")
     var btnSignup = CustomButton(backgroundColor: .clear, title: "Create Account",titleColor: .appDarkBluePrimary)
-    
+    var viewModel: LoginViewModel? {
+        didSet {
+            bindServerResponse()
+        }
+    }
+    private var cancellables: Set<AnyCancellable> = []
     override func viewDidLoad() {
         self.addBackgroundImageView()
         self.addLoginView()
@@ -105,6 +111,11 @@ class LoginVC: UIViewController {
             self.btnLogin.heightAnchor.constraint(equalToConstant: 45)
         ])
         btnLogin.layer.cornerRadius = 22.5
+       btnLogin.addTarget(self, action: #selector(btnLoginTapped(_:)), for: .touchUpInside)
+    }
+    
+    @objc func btnLoginTapped(_ sender: UIButton) {
+        self.viewModel?.fetchUserProfile()
     }
     
    fileprivate func addSignUpButton() {
@@ -115,5 +126,26 @@ class LoginVC: UIViewController {
             self.btnSignup.trailingAnchor.constraint(equalTo: self.loginView.trailingAnchor,constant: -20),
             self.btnSignup.heightAnchor.constraint(equalToConstant: 45)
         ])
+    }
+    
+    fileprivate func bindServerResponse() {
+        self.viewModel?.$errorMessage
+            .receive(on: DispatchQueue.main)
+            .sink(receiveValue: { [weak self] errorMessage in
+                if let self, let errorMessage {
+                    
+                }
+            })
+            .store(in: &cancellables)
+        
+        self.viewModel?.$userProfileData
+            .receive(on: DispatchQueue.main)
+            .sink(receiveValue: { [weak self] profile in
+                if let self, let profile {
+                    let destVC = HomeVC()
+                    self.show(destVC, sender: nil)
+                }
+            })
+            .store(in: &cancellables)
     }
 }
