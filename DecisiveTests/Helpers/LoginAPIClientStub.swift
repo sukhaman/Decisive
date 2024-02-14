@@ -28,8 +28,8 @@ class LoginAPIClientStub: LoginAPIClient {
     }
     
     private func makeUserProfiledData() -> Data {
-        return try! JSONSerialization.data(withJSONObject: ["user":
-                                                                ["id": "2AB2AE66-A4B7-4A16-B374-51BBAC8DB086", "first_name": "First","last_name": "Last"]
+        return try! JSONSerialization.data(withJSONObject:
+                                                                ["id": 2, "first_name": "First","last_name": "Last"
                                                            ])
     }
 }

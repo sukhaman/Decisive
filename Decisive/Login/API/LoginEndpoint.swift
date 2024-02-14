@@ -11,7 +11,7 @@ protocol APIProtocol {
 enum LoginEndpoint: RawRepresentable,APIProtocol {
     init?(rawValue: String) { nil }
     
-    static let baseUrl = URL(string: "valid.baseurl.com")!
+    static internal let baseUrl = URL(string: "valid.baseurl.com")!
     case login
     
     var rawValue: String {

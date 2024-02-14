@@ -65,7 +65,31 @@ class LoginIntegrationTests: XCTestCase {
             wait(for: [expectation], timeout: 5) // Adjust the timeout as needed
         }
     
+    func test_loginVC_showHomeScreen() {
+            // Arrange
+            let sut = makeSUT()
+            let mockNavigation = MockNavigationController(rootViewController: sut)
+            let expectation = XCTestExpectation(description: "Login request should fail")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            expectation.fulfill()
+        }
+            // Act
+        sut.btnLogin.sendActions(for: .touchUpInside)
+            
+            // Wait for the expectation to be fulfilled
+            wait(for: [expectation], timeout: 5) // Adjust the timeout as needed
+        let topVC = mockNavigation.pushedViewController as? HomeVC
+        topVC?.loadViewIfNeeded()
+        XCTAssertNotNil(topVC)
+        }
+    
     // MARK: Helpers
     
-    
+    private func makeSUT() -> LoginVC {
+        let viewModel = LoginViewModel(service: LoginAPIClientStub())
+        let view = LoginUIComposer.createLoginModule(viewModel)
+        view.loadViewIfNeeded()
+        return view
+    }
+
 }

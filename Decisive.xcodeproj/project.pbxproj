@@ -25,6 +25,10 @@
 		A21BADEB2B798581008D995C /* LoginIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BADEA2B798581008D995C /* LoginIntegrationTests.swift */; };
 		A21BADED2B798A49008D995C /* LoginEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BADEC2B798A49008D995C /* LoginEndpoint.swift */; };
 		A21BADF02B79B36D008D995C /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BADEF2B79B36D008D995C /* UserProfile.swift */; };
+		A21BADF62B7B0AF9008D995C /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BADF52B7B0AF9008D995C /* HomeVC.swift */; };
+		A21BADF82B7B0B9F008D995C /* MockNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BADF72B7B0B9F008D995C /* MockNavigation.swift */; };
+		A21BADFB2B7B0C1D008D995C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BADFA2B7B0C1D008D995C /* LoginViewModel.swift */; };
+		A21BADFE2B7C611B008D995C /* LoginUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BADFD2B7C611B008D995C /* LoginUIComposer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +71,10 @@
 		A21BADEA2B798581008D995C /* LoginIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginIntegrationTests.swift; sourceTree = "<group>"; };
 		A21BADEC2B798A49008D995C /* LoginEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEndpoint.swift; sourceTree = "<group>"; };
 		A21BADEF2B79B36D008D995C /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		A21BADF52B7B0AF9008D995C /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		A21BADF72B7B0B9F008D995C /* MockNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNavigation.swift; sourceTree = "<group>"; };
+		A21BADFA2B7B0C1D008D995C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		A21BADFD2B7C611B008D995C /* LoginUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUIComposer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +125,7 @@
 		A21BAD872B791322008D995C /* Decisive */ = {
 			isa = PBXGroup;
 			children = (
+				A21BADF32B7B0AEB008D995C /* Home */,
 				A21BADB92B7918C8008D995C /* Login */,
 				A21BADB82B791373008D995C /* SupportingFiles */,
 			);
@@ -158,6 +167,8 @@
 		A21BADB92B7918C8008D995C /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				A21BADFC2B7C6109008D995C /* Composer */,
+				A21BADF92B7B0C0A008D995C /* ViewModel */,
 				A21BADEE2B79B362008D995C /* Model */,
 				A21BADE62B798208008D995C /* API */,
 				A21BADBA2B7918CD008D995C /* Views */,
@@ -179,6 +190,7 @@
 				A21BADC32B791D4D008D995C /* UIViewController+Snapshot.swift */,
 				A21BADC62B791FC7008D995C /* XCTestCase+Snapshot.swift */,
 				A21BADE42B797DC8008D995C /* LoginAPIClientStub.swift */,
+				A21BADF72B7B0B9F008D995C /* MockNavigation.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -232,6 +244,38 @@
 				A21BADEF2B79B36D008D995C /* UserProfile.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		A21BADF32B7B0AEB008D995C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A21BADF42B7B0AEF008D995C /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A21BADF42B7B0AEF008D995C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A21BADF52B7B0AF9008D995C /* HomeVC.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A21BADF92B7B0C0A008D995C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A21BADFA2B7B0C1D008D995C /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A21BADFC2B7C6109008D995C /* Composer */ = {
+			isa = PBXGroup;
+			children = (
+				A21BADFD2B7C611B008D995C /* LoginUIComposer.swift */,
+			);
+			path = Composer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,11 +414,14 @@
 			files = (
 				A21BADDC2B79438F008D995C /* CustomTextField.swift in Sources */,
 				A21BAD892B791322008D995C /* AppDelegate.swift in Sources */,
+				A21BADFE2B7C611B008D995C /* LoginUIComposer.swift in Sources */,
 				A21BADBC2B7918D7008D995C /* LoginVC.swift in Sources */,
+				A21BADF62B7B0AF9008D995C /* HomeVC.swift in Sources */,
 				A21BADE82B79822A008D995C /* LoginAPIClient.swift in Sources */,
 				A21BADF02B79B36D008D995C /* UserProfile.swift in Sources */,
 				A21BAD8B2B791322008D995C /* SceneDelegate.swift in Sources */,
 				A21BADED2B798A49008D995C /* LoginEndpoint.swift in Sources */,
+				A21BADFB2B7B0C1D008D995C /* LoginViewModel.swift in Sources */,
 				A21BADE02B79459B008D995C /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,6 +431,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A21BADE52B797DC8008D995C /* LoginAPIClientStub.swift in Sources */,
+				A21BADF82B7B0B9F008D995C /* MockNavigation.swift in Sources */,
 				A21BADEB2B798581008D995C /* LoginIntegrationTests.swift in Sources */,
 				A21BADD52B792726008D995C /* XCTestCase+Snapshot.swift in Sources */,
 				A21BADD62B79272B008D995C /* UIViewController+Snapshot.swift in Sources */,
