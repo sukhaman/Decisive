@@ -18,6 +18,7 @@ class LoginVC: UIViewController {
             bindServerResponse()
         }
     }
+    var router: LoginRouter?
     private var cancellables: Set<AnyCancellable> = []
     override func viewDidLoad() {
         self.addBackgroundImageView()
@@ -27,6 +28,9 @@ class LoginVC: UIViewController {
         addPasswordTextField()
         addSignInButton()
         addSignUpButton()
+        if let navigationController = self.navigationController {
+            self.router = LoginRouter(navigationController: navigationController)
+        }
     }
     
    fileprivate func addBackgroundImageView() {
@@ -115,7 +119,9 @@ class LoginVC: UIViewController {
     }
     
     @objc func btnLoginTapped(_ sender: UIButton) {
-        self.viewModel?.fetchUserProfile()
+        let email = self.txtEmail.text
+        let password = self.txtPassword.text
+        self.viewModel?.fetchUserProfile(email, password: password)
     }
     
    fileprivate func addSignUpButton() {
@@ -133,7 +139,7 @@ class LoginVC: UIViewController {
             .receive(on: DispatchQueue.main)
             .sink(receiveValue: { [weak self] errorMessage in
                 if let self, let errorMessage {
-                    
+                    self.router?.showAlert(errorMessage)
                 }
             })
             .store(in: &cancellables)
@@ -142,7 +148,7 @@ class LoginVC: UIViewController {
             .receive(on: DispatchQueue.main)
             .sink(receiveValue: { [weak self] profile in
                 if let self, let profile {
-                    let destVC = HomeVC()
+                    let destVC = HomeVC(profile: profile)
                     self.show(destVC, sender: nil)
                 }
             })

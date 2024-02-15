@@ -29,6 +29,7 @@
 		A21BADF82B7B0B9F008D995C /* MockNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BADF72B7B0B9F008D995C /* MockNavigation.swift */; };
 		A21BADFB2B7B0C1D008D995C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BADFA2B7B0C1D008D995C /* LoginViewModel.swift */; };
 		A21BADFE2B7C611B008D995C /* LoginUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BADFD2B7C611B008D995C /* LoginUIComposer.swift */; };
+		A21BAE012B7C6AB0008D995C /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BAE002B7C6AB0008D995C /* LoginRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		A21BADF72B7B0B9F008D995C /* MockNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNavigation.swift; sourceTree = "<group>"; };
 		A21BADFA2B7B0C1D008D995C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		A21BADFD2B7C611B008D995C /* LoginUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUIComposer.swift; sourceTree = "<group>"; };
+		A21BAE002B7C6AB0008D995C /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 		A21BADB92B7918C8008D995C /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				A21BADFF2B7C6AA5008D995C /* Router */,
 				A21BADFC2B7C6109008D995C /* Composer */,
 				A21BADF92B7B0C0A008D995C /* ViewModel */,
 				A21BADEE2B79B362008D995C /* Model */,
@@ -276,6 +279,14 @@
 				A21BADFD2B7C611B008D995C /* LoginUIComposer.swift */,
 			);
 			path = Composer;
+			sourceTree = "<group>";
+		};
+		A21BADFF2B7C6AA5008D995C /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				A21BAE002B7C6AB0008D995C /* LoginRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,6 +425,7 @@
 			files = (
 				A21BADDC2B79438F008D995C /* CustomTextField.swift in Sources */,
 				A21BAD892B791322008D995C /* AppDelegate.swift in Sources */,
+				A21BAE012B7C6AB0008D995C /* LoginRouter.swift in Sources */,
 				A21BADFE2B7C611B008D995C /* LoginUIComposer.swift in Sources */,
 				A21BADBC2B7918D7008D995C /* LoginVC.swift in Sources */,
 				A21BADF62B7B0AF9008D995C /* HomeVC.swift in Sources */,

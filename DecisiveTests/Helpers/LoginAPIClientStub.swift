@@ -17,10 +17,21 @@ class LoginAPIClientStub: LoginAPIClient {
             return Fail(error: URLError(.unsupportedURL)).eraseToAnyPublisher()
         }
         
-        // Return a publisher with some mock data
-        return Just(makeUserProfile())
-            .setFailureType(to: Error.self)
-            .eraseToAnyPublisher()
+        if let body = request.httpBody {
+            let dict = try! JSONSerialization.jsonObject(with: body) as! [String: String]
+            let email = dict["email"]! as String
+            if email.isEmpty {
+                return Fail(error: NSError(domain: "Mock Error", code: 42, userInfo: ["error": "User not found"])).eraseToAnyPublisher()
+            } else {
+                // Return a publisher with some mock data
+                return Just(makeUserProfile())
+                    .setFailureType(to: Error.self)
+                    .eraseToAnyPublisher()
+            }
+        } else {
+            return Fail(error: NSError(domain: "Mock Error", code: 42, userInfo: ["error": "User not found"])).eraseToAnyPublisher()
+        }
+        
     }
     
     private func makeUserProfile() -> UserProfile {
