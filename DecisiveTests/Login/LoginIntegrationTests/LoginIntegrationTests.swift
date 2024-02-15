@@ -55,6 +55,7 @@ class LoginIntegrationTests: XCTestCase {
         let topVC = mockNavigation.pushedViewController as? HomeVC
         topVC?.loadViewIfNeeded()
         XCTAssertNotNil(topVC)
+        XCTAssertNotNil(topVC?.profile, "User Profile object should not be nil")
         }
     
     func test_loginVC_loginRequestFailed() {

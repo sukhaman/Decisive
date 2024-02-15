@@ -6,7 +6,7 @@ import UIKit
 
 class HomeVC: UIViewController {
     
-    private var profile: UserProfile?
+    private (set) public var profile: UserProfile?
     override func viewDidLoad() {
         super.viewDidLoad()
     }
