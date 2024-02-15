@@ -30,6 +30,7 @@
 		A21BADFB2B7B0C1D008D995C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BADFA2B7B0C1D008D995C /* LoginViewModel.swift */; };
 		A21BADFE2B7C611B008D995C /* LoginUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BADFD2B7C611B008D995C /* LoginUIComposer.swift */; };
 		A21BAE012B7C6AB0008D995C /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BAE002B7C6AB0008D995C /* LoginRouter.swift */; };
+		A21BAE062B7DB6C7008D995C /* HomeIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BAE052B7DB6C7008D995C /* HomeIntegrationTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		A21BADFA2B7B0C1D008D995C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		A21BADFD2B7C611B008D995C /* LoginUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUIComposer.swift; sourceTree = "<group>"; };
 		A21BAE002B7C6AB0008D995C /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		A21BAE052B7DB6C7008D995C /* HomeIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeIntegrationTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 		A21BAD9E2B791324008D995C /* DecisiveTests */ = {
 			isa = PBXGroup;
 			children = (
+				A21BAE032B7DB69A008D995C /* Home */,
 				A21BADC22B791D10008D995C /* Helpers */,
 				A21BADC82B791FDB008D995C /* Login */,
 			);
@@ -287,6 +290,22 @@
 				A21BAE002B7C6AB0008D995C /* LoginRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		A21BAE032B7DB69A008D995C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A21BAE042B7DB6B0008D995C /* HomeIntegrationTests */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A21BAE042B7DB6B0008D995C /* HomeIntegrationTests */ = {
+			isa = PBXGroup;
+			children = (
+				A21BAE052B7DB6C7008D995C /* HomeIntegrationTests.swift */,
+			);
+			path = HomeIntegrationTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -444,6 +463,7 @@
 			files = (
 				A21BADE52B797DC8008D995C /* LoginAPIClientStub.swift in Sources */,
 				A21BADF82B7B0B9F008D995C /* MockNavigation.swift in Sources */,
+				A21BAE062B7DB6C7008D995C /* HomeIntegrationTests.swift in Sources */,
 				A21BADEB2B798581008D995C /* LoginIntegrationTests.swift in Sources */,
 				A21BADD52B792726008D995C /* XCTestCase+Snapshot.swift in Sources */,
 				A21BADD62B79272B008D995C /* UIViewController+Snapshot.swift in Sources */,

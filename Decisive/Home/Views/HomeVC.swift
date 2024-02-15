@@ -9,6 +9,11 @@ class HomeVC: UIViewController {
     private (set) public var profile: UserProfile?
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureViewController()
+    }
+    
+    fileprivate func configureViewController() {
+        title = "Home"
     }
     
     convenience init(profile: UserProfile) {
