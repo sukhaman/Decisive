@@ -155,3 +155,96 @@ class LoginVC: UIViewController {
             .store(in: &cancellables)
     }
 }
+
+
+
+class CardStackViewController: UIViewController {
+    
+    var cardViews: [UIView] = []
+    var currentCardIndex = 0
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Add images to the card stack
+        let images = [UIImage(resource: .appIcon), UIImage(resource: .samaraDoole), UIImage(resource: .samaraDoole)]
+        for image in images {
+            let cardView = createCardView(image: image)
+            cardViews.append(cardView)
+            view.addSubview(cardView)
+        }
+        
+        // Position card views
+        positionCardViews()
+        
+        // Add pan gesture recognizer to the top card
+        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture(_:)))
+        cardViews[currentCardIndex].addGestureRecognizer(panGestureRecognizer)
+    }
+    
+    func createCardView(image: UIImage?) -> UIView {
+        let cardWidth: CGFloat = 300
+        let cardHeight: CGFloat = 400
+        
+        let cardView = UIView(frame: CGRect(x: (view.bounds.width - cardWidth) / 2, y: (view.bounds.height - cardHeight) / 2, width: cardWidth, height: cardHeight))
+        cardView.backgroundColor = .white
+        cardView.layer.cornerRadius = 10
+        cardView.layer.shadowColor = UIColor.black.cgColor
+        cardView.layer.shadowOpacity = 0.5
+        cardView.layer.shadowOffset = CGSize(width: 0, height: 2)
+        cardView.layer.shadowRadius = 4
+        
+        let imageView = UIImageView(frame: cardView.bounds)
+        imageView.image = image
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        cardView.addSubview(imageView)
+        
+        return cardView
+    }
+    
+    func positionCardViews() {
+        for (index, cardView) in cardViews.enumerated() {
+            if index == currentCardIndex {
+                view.bringSubviewToFront(cardView)
+            }
+            let offset = CGFloat(index) * 10 // Adjust the offset as needed
+            cardView.transform = CGAffineTransform(translationX: 0, y: offset)
+        }
+    }
+    
+    @objc func handlePanGesture(_ gestureRecognizer: UIPanGestureRecognizer) {
+        let cardView = cardViews[currentCardIndex]
+        let translation = gestureRecognizer.translation(in: cardView.superview)
+        
+        switch gestureRecognizer.state {
+        case .began, .changed:
+            cardView.transform = CGAffineTransform(translationX: 0, y: translation.y)
+        case .ended:
+            if translation.y > 100 {
+                removeTopCard()
+            } else {
+                UIView.animate(withDuration: 0.3) {
+                    self.positionCardViews()
+                }
+            }
+        default:
+            break
+        }
+    }
+    
+    func removeTopCard() {
+        let cardView = cardViews[currentCardIndex]
+        UIView.animate(withDuration: 0.3, animations: {
+            cardView.alpha = 0
+            cardView.transform = CGAffineTransform(translationX: 0, y: 500) // Move off the screen
+        }) { (_) in
+            cardView.removeFromSuperview()
+            self.cardViews.remove(at: self.currentCardIndex)
+            if self.currentCardIndex < self.cardViews.count {
+                self.positionCardViews()
+                self.cardViews[self.currentCardIndex].addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(self.handlePanGesture(_:))))
+            }
+        }
+    }
+}

@@ -31,6 +31,9 @@
 		A21BADFE2B7C611B008D995C /* LoginUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BADFD2B7C611B008D995C /* LoginUIComposer.swift */; };
 		A21BAE012B7C6AB0008D995C /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BAE002B7C6AB0008D995C /* LoginRouter.swift */; };
 		A21BAE062B7DB6C7008D995C /* HomeIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21BAE052B7DB6C7008D995C /* HomeIntegrationTests.swift */; };
+		A2ED5B452B8BA29600C90C99 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ED5B442B8BA29600C90C99 /* CreateAccountVC.swift */; };
+		A2ED5B482B8BA46500C90C99 /* CustomLabelTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ED5B472B8BA46500C90C99 /* CustomLabelTextFieldView.swift */; };
+		A2ED5B4C2B8BA90000C90C99 /* CreateAccountSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ED5B4B2B8BA90000C90C99 /* CreateAccountSnapshotTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +82,9 @@
 		A21BADFD2B7C611B008D995C /* LoginUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUIComposer.swift; sourceTree = "<group>"; };
 		A21BAE002B7C6AB0008D995C /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		A21BAE052B7DB6C7008D995C /* HomeIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeIntegrationTests.swift; sourceTree = "<group>"; };
+		A2ED5B442B8BA29600C90C99 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
+		A2ED5B472B8BA46500C90C99 /* CustomLabelTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabelTextFieldView.swift; sourceTree = "<group>"; };
+		A2ED5B4B2B8BA90000C90C99 /* CreateAccountSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountSnapshotTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +135,7 @@
 		A21BAD872B791322008D995C /* Decisive */ = {
 			isa = PBXGroup;
 			children = (
+				A2ED5B422B8BA1DC00C90C99 /* CreateAccount */,
 				A21BADF32B7B0AEB008D995C /* Home */,
 				A21BADB92B7918C8008D995C /* Login */,
 				A21BADB82B791373008D995C /* SupportingFiles */,
@@ -139,6 +146,7 @@
 		A21BAD9E2B791324008D995C /* DecisiveTests */ = {
 			isa = PBXGroup;
 			children = (
+				A2ED5B492B8BA8E500C90C99 /* CreateAccount */,
 				A21BAE032B7DB69A008D995C /* Home */,
 				A21BADC22B791D10008D995C /* Helpers */,
 				A21BADC82B791FDB008D995C /* Login */,
@@ -308,6 +316,39 @@
 			path = HomeIntegrationTests;
 			sourceTree = "<group>";
 		};
+		A2ED5B422B8BA1DC00C90C99 /* CreateAccount */ = {
+			isa = PBXGroup;
+			children = (
+				A2ED5B432B8BA1EC00C90C99 /* Views */,
+			);
+			path = CreateAccount;
+			sourceTree = "<group>";
+		};
+		A2ED5B432B8BA1EC00C90C99 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A2ED5B442B8BA29600C90C99 /* CreateAccountVC.swift */,
+				A2ED5B472B8BA46500C90C99 /* CustomLabelTextFieldView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A2ED5B492B8BA8E500C90C99 /* CreateAccount */ = {
+			isa = PBXGroup;
+			children = (
+				A2ED5B4A2B8BA8F100C90C99 /* SnapshotTests */,
+			);
+			path = CreateAccount;
+			sourceTree = "<group>";
+		};
+		A2ED5B4A2B8BA8F100C90C99 /* SnapshotTests */ = {
+			isa = PBXGroup;
+			children = (
+				A2ED5B4B2B8BA90000C90C99 /* CreateAccountSnapshotTests.swift */,
+			);
+			path = SnapshotTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -443,6 +484,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A21BADDC2B79438F008D995C /* CustomTextField.swift in Sources */,
+				A2ED5B452B8BA29600C90C99 /* CreateAccountVC.swift in Sources */,
 				A21BAD892B791322008D995C /* AppDelegate.swift in Sources */,
 				A21BAE012B7C6AB0008D995C /* LoginRouter.swift in Sources */,
 				A21BADFE2B7C611B008D995C /* LoginUIComposer.swift in Sources */,
@@ -451,6 +493,7 @@
 				A21BADE82B79822A008D995C /* LoginAPIClient.swift in Sources */,
 				A21BADF02B79B36D008D995C /* UserProfile.swift in Sources */,
 				A21BAD8B2B791322008D995C /* SceneDelegate.swift in Sources */,
+				A2ED5B482B8BA46500C90C99 /* CustomLabelTextFieldView.swift in Sources */,
 				A21BADED2B798A49008D995C /* LoginEndpoint.swift in Sources */,
 				A21BADFB2B7B0C1D008D995C /* LoginViewModel.swift in Sources */,
 				A21BADE02B79459B008D995C /* CustomButton.swift in Sources */,
@@ -467,6 +510,7 @@
 				A21BADEB2B798581008D995C /* LoginIntegrationTests.swift in Sources */,
 				A21BADD52B792726008D995C /* XCTestCase+Snapshot.swift in Sources */,
 				A21BADD62B79272B008D995C /* UIViewController+Snapshot.swift in Sources */,
+				A2ED5B4C2B8BA90000C90C99 /* CreateAccountSnapshotTests.swift in Sources */,
 				A21BADD42B792721008D995C /* LoginSnapshotTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
