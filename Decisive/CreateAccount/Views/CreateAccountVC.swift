@@ -14,6 +14,7 @@ class CreateAccountVC: UIViewController {
     var emailView = CustomLabelTextFieldView("Email:", "Enter your email")
     var phoneView = CustomLabelTextFieldView("Phone:", "Enter your Phone Number")
     var passwordView = CustomLabelTextFieldView("Password:", "Enter your Password")
+    var confirmPasswordView = CustomLabelTextFieldView("Confirm Password:", "Enter your Confirm Password")
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,6 +25,7 @@ class CreateAccountVC: UIViewController {
         addEmailView()
         addPhoneNumberView()
         addPasswordView()
+        addConfirmPasswordView()
     }
     
     fileprivate func addScrollView() {
@@ -113,8 +115,20 @@ class CreateAccountVC: UIViewController {
             passwordView.topAnchor.constraint(equalTo: phoneView.bottomAnchor, constant: 20),
             passwordView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
             passwordView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
-            passwordView.heightAnchor.constraint(equalToConstant: 80),
-            contentView.bottomAnchor.constraint(equalTo: passwordView.bottomAnchor, constant: 30)
+            passwordView.heightAnchor.constraint(equalToConstant: 80)
+        ])
+    }
+    
+    fileprivate func addConfirmPasswordView() {
+        contentView.addSubview(confirmPasswordView)
+        
+        // Auto Layout constraints
+        NSLayoutConstraint.activate([
+            confirmPasswordView.topAnchor.constraint(equalTo: passwordView.bottomAnchor, constant: 20),
+            confirmPasswordView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            confirmPasswordView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+            confirmPasswordView.heightAnchor.constraint(equalToConstant: 80),
+            contentView.bottomAnchor.constraint(equalTo: confirmPasswordView.bottomAnchor, constant: 30)
         ])
     }
 }
