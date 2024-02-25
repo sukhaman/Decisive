@@ -12,6 +12,8 @@ class CreateAccountVC: UIViewController {
     let firstNameView = CustomLabelTextFieldView("First Name:", "Enter your first name")
     let lastNameView = CustomLabelTextFieldView("Last Name:", "Enter your last name")
     var emailView = CustomLabelTextFieldView("Email:", "Enter your email")
+    var phoneView = CustomLabelTextFieldView("Phone:", "Enter your Phone Number")
+    var passwordView = CustomLabelTextFieldView("Password:", "Enter your Password")
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,6 +22,8 @@ class CreateAccountVC: UIViewController {
         addFirstNameView()
         addLastNameView()
         addEmailView()
+        addPhoneNumberView()
+        addPasswordView()
     }
     
     fileprivate func addScrollView() {
@@ -85,8 +89,32 @@ class CreateAccountVC: UIViewController {
             emailView.topAnchor.constraint(equalTo: lastNameView.bottomAnchor, constant: 20),
             emailView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
             emailView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
-            emailView.heightAnchor.constraint(equalToConstant: 80),
-            contentView.bottomAnchor.constraint(equalTo: emailView.bottomAnchor, constant: 30)
+            emailView.heightAnchor.constraint(equalToConstant: 80)
+        ])
+    }
+    
+    fileprivate func addPhoneNumberView() {
+        contentView.addSubview(phoneView)
+        
+        // Auto Layout constraints
+        NSLayoutConstraint.activate([
+            phoneView.topAnchor.constraint(equalTo: emailView.bottomAnchor, constant: 20),
+            phoneView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            phoneView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+            phoneView.heightAnchor.constraint(equalToConstant: 80)
+        ])
+    }
+    
+    fileprivate func addPasswordView() {
+        contentView.addSubview(passwordView)
+        
+        // Auto Layout constraints
+        NSLayoutConstraint.activate([
+            passwordView.topAnchor.constraint(equalTo: phoneView.bottomAnchor, constant: 20),
+            passwordView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            passwordView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+            passwordView.heightAnchor.constraint(equalToConstant: 80),
+            contentView.bottomAnchor.constraint(equalTo: passwordView.bottomAnchor, constant: 30)
         ])
     }
 }
