@@ -42,6 +42,7 @@
 		A2ED5B5C2B8BC35900C90C99 /* LOGIN_LIGHT_VIEW_iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = A2ED5B582B8BC35900C90C99 /* LOGIN_LIGHT_VIEW_iPhone.png */; };
 		A2ED5B5D2B8BC35900C90C99 /* LOGIN_LIGHT_VIEW_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = A2ED5B592B8BC35900C90C99 /* LOGIN_LIGHT_VIEW_iPad.png */; };
 		A2ED5B5E2B8BC35900C90C99 /* LOGIN_DARK_VIEW_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = A2ED5B5A2B8BC35900C90C99 /* LOGIN_DARK_VIEW_iPad.png */; };
+		A2ED5B612B8BC3E500C90C99 /* CreateAccountUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ED5B602B8BC3E500C90C99 /* CreateAccountUnitTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		A2ED5B582B8BC35900C90C99 /* LOGIN_LIGHT_VIEW_iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LOGIN_LIGHT_VIEW_iPhone.png; sourceTree = "<group>"; };
 		A2ED5B592B8BC35900C90C99 /* LOGIN_LIGHT_VIEW_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LOGIN_LIGHT_VIEW_iPad.png; sourceTree = "<group>"; };
 		A2ED5B5A2B8BC35900C90C99 /* LOGIN_DARK_VIEW_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LOGIN_DARK_VIEW_iPad.png; sourceTree = "<group>"; };
+		A2ED5B602B8BC3E500C90C99 /* CreateAccountUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountUnitTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -353,6 +355,7 @@
 		A2ED5B492B8BA8E500C90C99 /* CreateAccount */ = {
 			isa = PBXGroup;
 			children = (
+				A2ED5B5F2B8BC3D200C90C99 /* UnitTests */,
 				A2ED5B4A2B8BA8F100C90C99 /* SnapshotTests */,
 			);
 			path = CreateAccount;
@@ -387,6 +390,14 @@
 				A2ED5B5A2B8BC35900C90C99 /* LOGIN_DARK_VIEW_iPad.png */,
 			);
 			path = snapshots;
+			sourceTree = "<group>";
+		};
+		A2ED5B5F2B8BC3D200C90C99 /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				A2ED5B602B8BC3E500C90C99 /* CreateAccountUnitTests.swift */,
+			);
+			path = UnitTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -554,6 +565,7 @@
 			files = (
 				A21BADE52B797DC8008D995C /* LoginAPIClientStub.swift in Sources */,
 				A21BADF82B7B0B9F008D995C /* MockNavigation.swift in Sources */,
+				A2ED5B612B8BC3E500C90C99 /* CreateAccountUnitTests.swift in Sources */,
 				A21BAE062B7DB6C7008D995C /* HomeIntegrationTests.swift in Sources */,
 				A21BADEB2B798581008D995C /* LoginIntegrationTests.swift in Sources */,
 				A21BADD52B792726008D995C /* XCTestCase+Snapshot.swift in Sources */,
