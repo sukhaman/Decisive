@@ -11,7 +11,7 @@ class CreateAccountVC: UIViewController {
     let contentView = UIView()
     let firstNameView = CustomLabelTextFieldView("First Name:", "Enter your first name")
     let lastNameView = CustomLabelTextFieldView("Last Name:", "Enter your last name")
-    
+    var emailView = CustomLabelTextFieldView("Email:", "Enter your email")
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,6 +19,7 @@ class CreateAccountVC: UIViewController {
         addContentView()
         addFirstNameView()
         addLastNameView()
+        addEmailView()
     }
     
     fileprivate func addScrollView() {
@@ -72,8 +73,20 @@ class CreateAccountVC: UIViewController {
             lastNameView.topAnchor.constraint(equalTo: firstNameView.bottomAnchor, constant: 20),
             lastNameView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
             lastNameView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
-            lastNameView.heightAnchor.constraint(equalToConstant: 80),
-            contentView.bottomAnchor.constraint(equalTo: lastNameView.bottomAnchor, constant: 30)
+            lastNameView.heightAnchor.constraint(equalToConstant: 80)
+        ])
+    }
+    
+    fileprivate func addEmailView() {
+        contentView.addSubview(emailView)
+        
+        // Auto Layout constraints
+        NSLayoutConstraint.activate([
+            emailView.topAnchor.constraint(equalTo: lastNameView.bottomAnchor, constant: 20),
+            emailView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            emailView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+            emailView.heightAnchor.constraint(equalToConstant: 80),
+            contentView.bottomAnchor.constraint(equalTo: emailView.bottomAnchor, constant: 30)
         ])
     }
 }
