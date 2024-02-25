@@ -15,6 +15,13 @@ class CreateAccountUnitTests: XCTestCase {
         XCTAssertEqual(expectedResult, actualResult)
     }
     
+    func test_createAccount_lastNameLabelHasText() {
+        let sut = makeSUT()
+       let expectedResult = "Last Name:"
+        let actualResult = sut.lastNameView.lblTitle.text
+        XCTAssertEqual(expectedResult, actualResult)
+    }
+    
     // MARK: Helpers
     
     private func makeSUT() -> CreateAccountVC {
