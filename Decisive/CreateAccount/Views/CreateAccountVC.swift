@@ -15,6 +15,7 @@ class CreateAccountVC: UIViewController {
     var phoneView = CustomLabelTextFieldView("Phone:", "Enter your Phone Number")
     var passwordView = CustomLabelTextFieldView("Password:", "Enter your Password")
     var confirmPasswordView = CustomLabelTextFieldView("Confirm Password:", "Enter your Confirm Password")
+    var btnCreate = UIButton()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,6 +27,7 @@ class CreateAccountVC: UIViewController {
         addPhoneNumberView()
         addPasswordView()
         addConfirmPasswordView()
+        addButtonView()
     }
     
     fileprivate func addScrollView() {
@@ -127,8 +129,24 @@ class CreateAccountVC: UIViewController {
             confirmPasswordView.topAnchor.constraint(equalTo: passwordView.bottomAnchor, constant: 20),
             confirmPasswordView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
             confirmPasswordView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
-            confirmPasswordView.heightAnchor.constraint(equalToConstant: 80),
-            contentView.bottomAnchor.constraint(equalTo: confirmPasswordView.bottomAnchor, constant: 30)
+            confirmPasswordView.heightAnchor.constraint(equalToConstant: 80)
+        ])
+    }
+    
+    fileprivate func addButtonView() {
+        contentView.addSubview(btnCreate)
+        btnCreate.translatesAutoresizingMaskIntoConstraints = false
+        btnCreate.setTitle("Create Account", for: .normal)
+        btnCreate.setTitleColor(.white, for: .normal)
+        btnCreate.backgroundColor = .appDarkBluePrimary
+        btnCreate.layer.cornerRadius = 10
+        // Auto Layout constraints
+        NSLayoutConstraint.activate([
+            btnCreate.topAnchor.constraint(equalTo: confirmPasswordView.bottomAnchor, constant: 20),
+            btnCreate.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            btnCreate.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+            btnCreate.heightAnchor.constraint(equalToConstant: 45),
+            contentView.bottomAnchor.constraint(equalTo: btnCreate.bottomAnchor, constant: 30)
         ])
     }
 }

@@ -34,6 +34,14 @@
 		A2ED5B452B8BA29600C90C99 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ED5B442B8BA29600C90C99 /* CreateAccountVC.swift */; };
 		A2ED5B482B8BA46500C90C99 /* CustomLabelTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ED5B472B8BA46500C90C99 /* CustomLabelTextFieldView.swift */; };
 		A2ED5B4C2B8BA90000C90C99 /* CreateAccountSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ED5B4B2B8BA90000C90C99 /* CreateAccountSnapshotTests.swift */; };
+		A2ED5B522B8BC34C00C90C99 /* CREATE_ACCOUNT_DARK_VIEW_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = A2ED5B4E2B8BC34C00C90C99 /* CREATE_ACCOUNT_DARK_VIEW_iPad.png */; };
+		A2ED5B532B8BC34C00C90C99 /* CREATE_ACCOUNT_LIGHT_VIEW_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = A2ED5B4F2B8BC34C00C90C99 /* CREATE_ACCOUNT_LIGHT_VIEW_iPad.png */; };
+		A2ED5B542B8BC34C00C90C99 /* CREATE_ACCOUNT_DARK_VIEW_iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = A2ED5B502B8BC34C00C90C99 /* CREATE_ACCOUNT_DARK_VIEW_iPhone.png */; };
+		A2ED5B552B8BC34C00C90C99 /* CREATE_ACCOUNT_LIGHT_VIEW_iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = A2ED5B512B8BC34C00C90C99 /* CREATE_ACCOUNT_LIGHT_VIEW_iPhone.png */; };
+		A2ED5B5B2B8BC35900C90C99 /* LOGIN_DARK_VIEW_iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = A2ED5B572B8BC35900C90C99 /* LOGIN_DARK_VIEW_iPhone.png */; };
+		A2ED5B5C2B8BC35900C90C99 /* LOGIN_LIGHT_VIEW_iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = A2ED5B582B8BC35900C90C99 /* LOGIN_LIGHT_VIEW_iPhone.png */; };
+		A2ED5B5D2B8BC35900C90C99 /* LOGIN_LIGHT_VIEW_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = A2ED5B592B8BC35900C90C99 /* LOGIN_LIGHT_VIEW_iPad.png */; };
+		A2ED5B5E2B8BC35900C90C99 /* LOGIN_DARK_VIEW_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = A2ED5B5A2B8BC35900C90C99 /* LOGIN_DARK_VIEW_iPad.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +93,14 @@
 		A2ED5B442B8BA29600C90C99 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		A2ED5B472B8BA46500C90C99 /* CustomLabelTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabelTextFieldView.swift; sourceTree = "<group>"; };
 		A2ED5B4B2B8BA90000C90C99 /* CreateAccountSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountSnapshotTests.swift; sourceTree = "<group>"; };
+		A2ED5B4E2B8BC34C00C90C99 /* CREATE_ACCOUNT_DARK_VIEW_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CREATE_ACCOUNT_DARK_VIEW_iPad.png; sourceTree = "<group>"; };
+		A2ED5B4F2B8BC34C00C90C99 /* CREATE_ACCOUNT_LIGHT_VIEW_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CREATE_ACCOUNT_LIGHT_VIEW_iPad.png; sourceTree = "<group>"; };
+		A2ED5B502B8BC34C00C90C99 /* CREATE_ACCOUNT_DARK_VIEW_iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CREATE_ACCOUNT_DARK_VIEW_iPhone.png; sourceTree = "<group>"; };
+		A2ED5B512B8BC34C00C90C99 /* CREATE_ACCOUNT_LIGHT_VIEW_iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CREATE_ACCOUNT_LIGHT_VIEW_iPhone.png; sourceTree = "<group>"; };
+		A2ED5B572B8BC35900C90C99 /* LOGIN_DARK_VIEW_iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LOGIN_DARK_VIEW_iPhone.png; sourceTree = "<group>"; };
+		A2ED5B582B8BC35900C90C99 /* LOGIN_LIGHT_VIEW_iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LOGIN_LIGHT_VIEW_iPhone.png; sourceTree = "<group>"; };
+		A2ED5B592B8BC35900C90C99 /* LOGIN_LIGHT_VIEW_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LOGIN_LIGHT_VIEW_iPad.png; sourceTree = "<group>"; };
+		A2ED5B5A2B8BC35900C90C99 /* LOGIN_DARK_VIEW_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LOGIN_DARK_VIEW_iPad.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +237,7 @@
 		A21BADC92B791FDF008D995C /* SnapshotTests */ = {
 			isa = PBXGroup;
 			children = (
+				A2ED5B562B8BC35900C90C99 /* snapshots */,
 				A21BADCA2B791FF5008D995C /* LoginSnapshotTests.swift */,
 			);
 			path = SnapshotTests;
@@ -344,9 +361,32 @@
 		A2ED5B4A2B8BA8F100C90C99 /* SnapshotTests */ = {
 			isa = PBXGroup;
 			children = (
+				A2ED5B4D2B8BC34C00C90C99 /* snapshots */,
 				A2ED5B4B2B8BA90000C90C99 /* CreateAccountSnapshotTests.swift */,
 			);
 			path = SnapshotTests;
+			sourceTree = "<group>";
+		};
+		A2ED5B4D2B8BC34C00C90C99 /* snapshots */ = {
+			isa = PBXGroup;
+			children = (
+				A2ED5B4E2B8BC34C00C90C99 /* CREATE_ACCOUNT_DARK_VIEW_iPad.png */,
+				A2ED5B4F2B8BC34C00C90C99 /* CREATE_ACCOUNT_LIGHT_VIEW_iPad.png */,
+				A2ED5B502B8BC34C00C90C99 /* CREATE_ACCOUNT_DARK_VIEW_iPhone.png */,
+				A2ED5B512B8BC34C00C90C99 /* CREATE_ACCOUNT_LIGHT_VIEW_iPhone.png */,
+			);
+			path = snapshots;
+			sourceTree = "<group>";
+		};
+		A2ED5B562B8BC35900C90C99 /* snapshots */ = {
+			isa = PBXGroup;
+			children = (
+				A2ED5B572B8BC35900C90C99 /* LOGIN_DARK_VIEW_iPhone.png */,
+				A2ED5B582B8BC35900C90C99 /* LOGIN_LIGHT_VIEW_iPhone.png */,
+				A2ED5B592B8BC35900C90C99 /* LOGIN_LIGHT_VIEW_iPad.png */,
+				A2ED5B5A2B8BC35900C90C99 /* LOGIN_DARK_VIEW_iPad.png */,
+			);
+			path = snapshots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -466,6 +506,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2ED5B522B8BC34C00C90C99 /* CREATE_ACCOUNT_DARK_VIEW_iPad.png in Resources */,
+				A2ED5B532B8BC34C00C90C99 /* CREATE_ACCOUNT_LIGHT_VIEW_iPad.png in Resources */,
+				A2ED5B552B8BC34C00C90C99 /* CREATE_ACCOUNT_LIGHT_VIEW_iPhone.png in Resources */,
+				A2ED5B5B2B8BC35900C90C99 /* LOGIN_DARK_VIEW_iPhone.png in Resources */,
+				A2ED5B5E2B8BC35900C90C99 /* LOGIN_DARK_VIEW_iPad.png in Resources */,
+				A2ED5B5C2B8BC35900C90C99 /* LOGIN_LIGHT_VIEW_iPhone.png in Resources */,
+				A2ED5B5D2B8BC35900C90C99 /* LOGIN_LIGHT_VIEW_iPad.png in Resources */,
+				A2ED5B542B8BC34C00C90C99 /* CREATE_ACCOUNT_DARK_VIEW_iPhone.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
