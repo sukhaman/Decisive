@@ -10,6 +10,17 @@ class CreateAccountVC: UIViewController {
     let scrollView = UIScrollView()
     let contentView = UIView()
     let firstNameView = CustomLabelTextFieldView("First Name:", "Enter your first name")
+    let lastNameView = CustomLabelTextFieldView("Last Name:", "Enter your last name")
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        addScrollView()
+        addContentView()
+        addFirstNameView()
+        addLastNameView()
+    }
+    
     fileprivate func addScrollView() {
         // Create a scroll view
         view.backgroundColor = .systemBackground
@@ -49,17 +60,20 @@ class CreateAccountVC: UIViewController {
             firstNameView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
             firstNameView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
             firstNameView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
-            firstNameView.heightAnchor.constraint(equalToConstant: 80),
-            contentView.bottomAnchor.constraint(equalTo: firstNameView.bottomAnchor, constant: 30)
+            firstNameView.heightAnchor.constraint(equalToConstant: 80)
         ])
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    fileprivate func addLastNameView() {
+        contentView.addSubview(lastNameView)
         
-        addScrollView()
-        
-        addContentView()
-        addFirstNameView()
+        // Auto Layout constraints
+        NSLayoutConstraint.activate([
+            lastNameView.topAnchor.constraint(equalTo: firstNameView.bottomAnchor, constant: 20),
+            lastNameView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            lastNameView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+            lastNameView.heightAnchor.constraint(equalToConstant: 80),
+            contentView.bottomAnchor.constraint(equalTo: lastNameView.bottomAnchor, constant: 30)
+        ])
     }
 }
