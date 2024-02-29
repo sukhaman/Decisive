@@ -43,6 +43,9 @@
 		A2ED5B5D2B8BC35900C90C99 /* LOGIN_LIGHT_VIEW_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = A2ED5B592B8BC35900C90C99 /* LOGIN_LIGHT_VIEW_iPad.png */; };
 		A2ED5B5E2B8BC35900C90C99 /* LOGIN_DARK_VIEW_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = A2ED5B5A2B8BC35900C90C99 /* LOGIN_DARK_VIEW_iPad.png */; };
 		A2ED5B612B8BC3E500C90C99 /* CreateAccountUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ED5B602B8BC3E500C90C99 /* CreateAccountUnitTests.swift */; };
+		A2ED5B642B8BEECA00C90C99 /* CreateAccount.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = A2ED5B632B8BEECA00C90C99 /* CreateAccount.xcstrings */; };
+		A2ED5B682B900D1400C90C99 /* CreateAccountConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ED5B672B900D1400C90C99 /* CreateAccountConstant.swift */; };
+		A2ED5B6A2B9017B800C90C99 /* Locaized+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ED5B692B9017B800C90C99 /* Locaized+TestHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +106,10 @@
 		A2ED5B592B8BC35900C90C99 /* LOGIN_LIGHT_VIEW_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LOGIN_LIGHT_VIEW_iPad.png; sourceTree = "<group>"; };
 		A2ED5B5A2B8BC35900C90C99 /* LOGIN_DARK_VIEW_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LOGIN_DARK_VIEW_iPad.png; sourceTree = "<group>"; };
 		A2ED5B602B8BC3E500C90C99 /* CreateAccountUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountUnitTests.swift; sourceTree = "<group>"; };
+		A2ED5B632B8BEECA00C90C99 /* CreateAccount.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = CreateAccount.xcstrings; sourceTree = "<group>"; };
+		A2ED5B652B8BEF4000C90C99 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		A2ED5B672B900D1400C90C99 /* CreateAccountConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountConstant.swift; sourceTree = "<group>"; };
+		A2ED5B692B9017B800C90C99 /* Locaized+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Locaized+TestHelpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +230,7 @@
 				A21BADC62B791FC7008D995C /* XCTestCase+Snapshot.swift */,
 				A21BADE42B797DC8008D995C /* LoginAPIClientStub.swift */,
 				A21BADF72B7B0B9F008D995C /* MockNavigation.swift */,
+				A2ED5B692B9017B800C90C99 /* Locaized+TestHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -338,6 +346,7 @@
 		A2ED5B422B8BA1DC00C90C99 /* CreateAccount */ = {
 			isa = PBXGroup;
 			children = (
+				A2ED5B622B8BC76100C90C99 /* Helpers */,
 				A2ED5B432B8BA1EC00C90C99 /* Views */,
 			);
 			path = CreateAccount;
@@ -398,6 +407,15 @@
 				A2ED5B602B8BC3E500C90C99 /* CreateAccountUnitTests.swift */,
 			);
 			path = UnitTests;
+			sourceTree = "<group>";
+		};
+		A2ED5B622B8BC76100C90C99 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A2ED5B632B8BEECA00C90C99 /* CreateAccount.xcstrings */,
+				A2ED5B672B900D1400C90C99 /* CreateAccountConstant.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -488,6 +506,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = A21BAD7C2B791322008D995C;
 			productRefGroup = A21BAD862B791322008D995C /* Products */;
@@ -510,6 +529,7 @@
 				A21BADDE2B79440D008D995C /* Colors.xcassets in Resources */,
 				A21BAD922B791324008D995C /* Assets.xcassets in Resources */,
 				A21BADC12B791CC8008D995C /* swiftgen.yml in Resources */,
+				A2ED5B642B8BEECA00C90C99 /* CreateAccount.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +568,7 @@
 				A21BAE012B7C6AB0008D995C /* LoginRouter.swift in Sources */,
 				A21BADFE2B7C611B008D995C /* LoginUIComposer.swift in Sources */,
 				A21BADBC2B7918D7008D995C /* LoginVC.swift in Sources */,
+				A2ED5B682B900D1400C90C99 /* CreateAccountConstant.swift in Sources */,
 				A21BADF62B7B0AF9008D995C /* HomeVC.swift in Sources */,
 				A21BADE82B79822A008D995C /* LoginAPIClient.swift in Sources */,
 				A21BADF02B79B36D008D995C /* UserProfile.swift in Sources */,
@@ -569,6 +590,7 @@
 				A21BAE062B7DB6C7008D995C /* HomeIntegrationTests.swift in Sources */,
 				A21BADEB2B798581008D995C /* LoginIntegrationTests.swift in Sources */,
 				A21BADD52B792726008D995C /* XCTestCase+Snapshot.swift in Sources */,
+				A2ED5B6A2B9017B800C90C99 /* Locaized+TestHelpers.swift in Sources */,
 				A21BADD62B79272B008D995C /* UIViewController+Snapshot.swift in Sources */,
 				A2ED5B4C2B8BA90000C90C99 /* CreateAccountSnapshotTests.swift in Sources */,
 				A21BADD42B792721008D995C /* LoginSnapshotTests.swift in Sources */,
@@ -603,6 +625,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				A21BAD942B791324008D995C /* Base */,
+				A2ED5B652B8BEF4000C90C99 /* es */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -615,6 +638,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -678,6 +702,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
