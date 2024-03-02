@@ -7,12 +7,12 @@ import UIKit
 class CreateAccountVC: UIViewController {
     let scrollView = UIScrollView()
     let contentView = UIView()
-    let firstNameView = CustomLabelTextFieldView(CreateAccountConstant().firstName, "Enter your first name")
-    let lastNameView = CustomLabelTextFieldView(CreateAccountConstant().lastName, "Enter your last name")
-    var emailView = CustomLabelTextFieldView(CreateAccountConstant().email, "Enter your email")
-    var phoneView = CustomLabelTextFieldView(CreateAccountConstant().phone, "Enter your Phone Number")
-    var passwordView = CustomLabelTextFieldView(CreateAccountConstant().password, "Enter your Password")
-    var confirmPasswordView = CustomLabelTextFieldView(CreateAccountConstant().confirmPassword, "Enter your Confirm Password")
+    let firstNameView = CustomLabelTextFieldView(CreateAccountConstant().firstName,CreateAccountConstant().firstNamePlacholder)
+    let lastNameView = CustomLabelTextFieldView(CreateAccountConstant().lastName, CreateAccountConstant().lastNamePlacholder)
+    var emailView = CustomLabelTextFieldView(CreateAccountConstant().email, CreateAccountConstant().emailPlacholder)
+    var phoneView = CustomLabelTextFieldView(CreateAccountConstant().phone, CreateAccountConstant().phonePlacholder)
+    var passwordView = CustomLabelTextFieldView(CreateAccountConstant().password, CreateAccountConstant().passwordPlacholder)
+    var confirmPasswordView = CustomLabelTextFieldView(CreateAccountConstant().confirmPassword, CreateAccountConstant().confirmPasswordPlacholder)
     var btnCreate = UIButton()
     override func viewDidLoad() {
         super.viewDidLoad()

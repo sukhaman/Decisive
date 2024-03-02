@@ -11,6 +11,12 @@ struct CreateAccountConstant {
     let  phone: String = localizedString("phone",comment: "Text for phone view label")
     let  password: String = localizedString("password",comment: "Text for password view label")
     let  confirmPassword: String = localizedString("confirm_password",comment: "Text for confirm password view label")
+    let  firstNamePlacholder: String = localizedString("first_name_placeholder",comment: "Text for first name view textField")
+    let  lastNamePlacholder: String = localizedString("last_name_placeholder",comment: "Text for last name view textField")
+    let  emailPlacholder: String = localizedString("email_placeholder",comment: "Text for email view textField")
+    let  phonePlacholder: String = localizedString("phone_placeholder",comment: "Text for phone view textField")
+    let  passwordPlacholder: String = localizedString("password_placeholder",comment: "Text for password view textField")
+    let  confirmPasswordPlacholder: String = localizedString("confirm_password_placeholder",comment: "Text for confirm password view textField")
     
    private static  func localizedString(_ key: String, comment: String) -> String {
             return NSLocalizedString( key,
