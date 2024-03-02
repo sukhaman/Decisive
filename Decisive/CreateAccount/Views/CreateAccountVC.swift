@@ -13,7 +13,7 @@ class CreateAccountVC: UIViewController {
     var phoneView = CustomLabelTextFieldView(CreateAccountConstant().phone, CreateAccountConstant().phonePlacholder)
     var passwordView = CustomLabelTextFieldView(CreateAccountConstant().password, CreateAccountConstant().passwordPlacholder)
     var confirmPasswordView = CustomLabelTextFieldView(CreateAccountConstant().confirmPassword, CreateAccountConstant().confirmPasswordPlacholder)
-    var btnCreate = UIButton()
+    var btnCreate = CustomButton(backgroundColor: .appDarkBluePrimary, title: CreateAccountConstant().createAccount)
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -133,11 +133,6 @@ class CreateAccountVC: UIViewController {
     
     fileprivate func addButtonView() {
         contentView.addSubview(btnCreate)
-        btnCreate.translatesAutoresizingMaskIntoConstraints = false
-        btnCreate.setTitle("Create Account", for: .normal)
-        btnCreate.setTitleColor(.white, for: .normal)
-        btnCreate.backgroundColor = .appDarkBluePrimary
-        btnCreate.layer.cornerRadius = 10
         // Auto Layout constraints
         NSLayoutConstraint.activate([
             btnCreate.topAnchor.constraint(equalTo: confirmPasswordView.bottomAnchor, constant: 20),

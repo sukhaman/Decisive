@@ -50,6 +50,13 @@ class CreateAccountUnitTests: XCTestCase {
         XCTAssertEqual(expectedResult, actualResult)
     }
     
+    func test_createAccount_createAccountButtonlHasText() {
+        let sut = makeSUT()
+       let expectedResult = localized("create_account")
+        let actualResult = sut.btnCreate.titleLabel?.text
+        XCTAssertEqual(expectedResult, actualResult)
+    }
+    
     // MARK: Helpers
     
     private func makeSUT() -> CreateAccountVC {
