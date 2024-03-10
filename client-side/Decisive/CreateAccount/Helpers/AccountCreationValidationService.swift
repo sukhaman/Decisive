@@ -63,4 +63,20 @@ struct AccountCreationValidationService {
         }
         return phoneNumber
     }
+    
+    func validateEmail(_ email: String?) throws -> String {
+        guard let email = email else {
+            throw AccountCreationError.invalidEmail
+        }
+        if email.isEmpty {
+            throw AccountCreationError.invalidEmail
+        }
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        let isEmailValid = emailTest.evaluate(with: self)
+        if !isEmailValid {
+            throw AccountCreationError.invalidEmail
+        }
+        return email
+    }
 }

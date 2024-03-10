@@ -115,6 +115,22 @@ class CreateAccountUnitTests: XCTestCase {
         XCTAssertEqual(expectedAlertMessage, actualAlertMessage)
     }
     
+    func testCreateAccount_createAccountButtonTapped_mustThrowInvalidEmailError() {
+        let sut = makeSUT()
+        let mockNavigation = MockNavigationController(rootViewController: sut)
+        let router = CreateAccountRouter(navigationController: mockNavigation)
+        sut.router = router
+        sut.firstNameView.txtTitle.text = "Any"
+        sut.lastNameView.txtTitle.text = "Last"
+        sut.phoneView.txtTitle.text = "1234567890"
+        sut.btnCreate.sendActions(for: .touchUpInside)
+        let alertController = mockNavigation.presentViewController as? UIAlertController
+        XCTAssertNotNil(alertController)
+        let expectedAlertMessage = "Invalid Email"
+        let actualAlertMessage = alertController?.message
+        XCTAssertEqual(expectedAlertMessage, actualAlertMessage)
+    }
+    
     // MARK: Helpers
     
     private func makeSUT() -> CreateAccountVC {
