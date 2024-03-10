@@ -17,10 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
-<<<<<<<< HEAD:Decisive/SupportingFiles/SceneDelegate.swift
         self.window = UIWindow(windowScene: windowScene)
-        let viewController = CreateAccountVC()
-========
         composeSplashScreen(windowScene)
     }
     
@@ -35,7 +32,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     fileprivate func composeSplashScreen(_ windowScene: UIWindowScene) {
         self.window = UIWindow(windowScene: windowScene)
         let viewController = SplashScreenUIComposer.compose(LoginViewModel(service: LoginAPIService()))
->>>>>>>> main:client-side/Decisive/SupportingFiles/SceneDelegate.swift
         let navigationController = UINavigationController(rootViewController: viewController)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()

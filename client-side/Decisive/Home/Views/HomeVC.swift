@@ -16,7 +16,9 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Home"
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        self.navigationItem.setHidesBackButton(true, animated: false)
+        self.view.backgroundColor = .white
         
     }
     
