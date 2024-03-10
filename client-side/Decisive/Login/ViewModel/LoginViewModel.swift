@@ -42,37 +42,6 @@ class LoginViewModel {
             .store(in: &cancellables)
 
     }
-    
-    func fetchAllUsers() {
-       
-        var request = URLRequest(url: LoginEndpoint.allUsers.url)
-        request.httpMethod = "GET"
-        let publisher = service.allUsers(from: request)
-        publisher
-            .sink { completion in
-                switch completion {
-                    
-                case .finished:
-                    break
-                case .failure(let error as NSError):
-                    print("Error", error)
-                    let userInfo = error.userInfo as [String: Any]
-                        // Access specific keys in the user info dictionary
-                        if let value = userInfo["error"] as? String {
-                            // Do something with the value
-                            self.errorMessage = value
-                        }
-                    
-                    
-                }
-            } receiveValue: { [weak self] data in
-                let json = try? JSONSerialization.jsonObject(with: data)
-                print("All Users",json)
-                
-            }
-            .store(in: &cancellables)
-
-    }
 }
 
 

@@ -32,7 +32,6 @@ class LoginVC: UIViewController {
         if let navigationController = self.navigationController {
             self.router = LoginRouter(navigationController: navigationController)
         }
-        self.viewModel?.fetchAllUsers()
     }
     
    fileprivate func addBackgroundImageView() {

@@ -46,8 +46,8 @@
             filePath = "Decisive/Login/ViewModel/LoginViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "sendLoginRequest(from:)"
             landmarkType = "7">
          </BreakpointContent>

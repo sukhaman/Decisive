@@ -8,5 +8,4 @@ import Combine
 public protocol LoginAPIClient {
 
     func sendLoginRequest(from request: URLRequest) -> AnyPublisher<LoginUserProfile?,Error>
-    func allUsers(from request: URLRequest) -> AnyPublisher<Data,Error>
 }

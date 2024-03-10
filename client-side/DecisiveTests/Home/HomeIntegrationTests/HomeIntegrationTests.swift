@@ -26,7 +26,7 @@ class HomeIntegrationTests: XCTestCase {
     
     private func makeUserProfiledData() -> Data {
         return try! JSONSerialization.data(withJSONObject:
-                                                                ["id": 2, "first_name": "First","last_name": "Last"
+                                            ["id": 2, "first_name": "First","last_name": "Last","phone":1234567890,"email":"test@test.com"
                                                            ])
     }
 }

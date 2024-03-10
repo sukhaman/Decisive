@@ -7,8 +7,8 @@ import Combine
 import Decisive
 
 class LoginAPIClientStub: LoginAPIClient {
-    func sendLoginRequest(from request: URLRequest) -> AnyPublisher<UserProfile?, Error> {
-        guard let url = request.url else {
+    func sendLoginRequest(from request: URLRequest) -> AnyPublisher<Decisive.LoginUserProfile?, any Error> {
+        guard request.url != nil else {
             return Fail(error: URLError(.badURL)).eraseToAnyPublisher()
         }
         
@@ -34,13 +34,15 @@ class LoginAPIClientStub: LoginAPIClient {
         
     }
     
-    private func makeUserProfile() -> UserProfile {
-        return try! JSONDecoder().decode(UserProfile.self, from: makeUserProfiledData())
+    
+    private func makeUserProfile() -> LoginUserProfile {
+        return try! JSONDecoder().decode(LoginUserProfile.self, from: makeUserProfiledData())
     }
     
     private func makeUserProfiledData() -> Data {
         return try! JSONSerialization.data(withJSONObject:
-                                                                ["id": 2, "first_name": "First","last_name": "Last"
+                                            ["user": ["id": 2, "first_name": "First","last_name": "Last","phone":1234567890,"email":"sa@test.com"],
+                                             "token": "jdhsdkaWUWU12323"
                                                            ])
     }
 }
