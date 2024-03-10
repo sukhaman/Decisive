@@ -11,6 +11,7 @@ enum AccountCreationError: LocalizedError {
     case invalidFirstName
     case invalidLastName
     case invalidPhoneNumber
+    case enterValidPhoneNumber
     case invalidEmail
     var errorDescription: String? {
         switch self {
@@ -20,6 +21,8 @@ enum AccountCreationError: LocalizedError {
             return "Invalid Last Name"
         case .invalidPhoneNumber:
             return "Invalid Phone Number"
+        case .enterValidPhoneNumber:
+            return "Phone number must be 10 digits"
         case .invalidEmail:
             return "Invalid Email"
         }
@@ -46,5 +49,18 @@ struct AccountCreationValidationService {
             throw AccountCreationError.invalidLastName
         }
         return lastName
+    }
+    
+    func validatePhoneNumber(_ phoneNumber: String?) throws -> String {
+        guard let phoneNumber = phoneNumber else {
+            throw AccountCreationError.invalidPhoneNumber
+        }
+        if phoneNumber.isEmpty {
+            throw AccountCreationError.invalidPhoneNumber
+        }
+        if phoneNumber.count < 10 {
+            throw AccountCreationError.enterValidPhoneNumber
+        }
+        return phoneNumber
     }
 }

@@ -84,6 +84,37 @@ class CreateAccountUnitTests: XCTestCase {
         XCTAssertEqual(expectedAlertMessage, actualAlertMessage)
     }
     
+    func testCreateAccount_createAccountButtonTapped_mustThrowInvalidPhoneNumberError() {
+        let sut = makeSUT()
+        let mockNavigation = MockNavigationController(rootViewController: sut)
+        let router = CreateAccountRouter(navigationController: mockNavigation)
+        sut.router = router
+        sut.firstNameView.txtTitle.text = "Any"
+        sut.lastNameView.txtTitle.text = "Last"
+        sut.btnCreate.sendActions(for: .touchUpInside)
+        let alertController = mockNavigation.presentViewController as? UIAlertController
+        XCTAssertNotNil(alertController)
+        let expectedAlertMessage = "Invalid Phone Number"
+        let actualAlertMessage = alertController?.message
+        XCTAssertEqual(expectedAlertMessage, actualAlertMessage)
+    }
+    
+    func testCreateAccount_createAccountButtonTapped_mustThrowInvalidPhoneNumberLengthError() {
+        let sut = makeSUT()
+        let mockNavigation = MockNavigationController(rootViewController: sut)
+        let router = CreateAccountRouter(navigationController: mockNavigation)
+        sut.router = router
+        sut.firstNameView.txtTitle.text = "Any"
+        sut.lastNameView.txtTitle.text = "Last"
+        sut.phoneView.txtTitle.text = "12345212"
+        sut.btnCreate.sendActions(for: .touchUpInside)
+        let alertController = mockNavigation.presentViewController as? UIAlertController
+        XCTAssertNotNil(alertController)
+        let expectedAlertMessage = "Phone number must be 10 digits"
+        let actualAlertMessage = alertController?.message
+        XCTAssertEqual(expectedAlertMessage, actualAlertMessage)
+    }
+    
     // MARK: Helpers
     
     private func makeSUT() -> CreateAccountVC {

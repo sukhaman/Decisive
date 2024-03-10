@@ -159,6 +159,7 @@ class CreateAccountVC: UIViewController {
         do {
             let firstName = try AccountCreationValidationService().validateFirstName(firstNameView.txtTitle.text)
             let lastName = try AccountCreationValidationService().validateLastName(lastNameView.txtTitle.text)
+            let phoneNumber = try AccountCreationValidationService().validatePhoneNumber(phoneView.txtTitle.text)
         } catch let error {
             self.router?.showAlert("Error",error.localizedDescription)
         }
