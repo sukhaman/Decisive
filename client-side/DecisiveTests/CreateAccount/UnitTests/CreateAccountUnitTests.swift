@@ -50,11 +50,38 @@ class CreateAccountUnitTests: XCTestCase {
         XCTAssertEqual(expectedResult, actualResult)
     }
     
-    func test_createAccount_createAccountButtonlHasText() {
+    func test_createAccount_createAccountButtonHasText() {
         let sut = makeSUT()
        let expectedResult = localized("create_account")
         let actualResult = sut.btnCreate.titleLabel?.text
         XCTAssertEqual(expectedResult, actualResult)
+    }
+    
+    func testCreateAccount_createAccountButtonTapped_mustThrowInvalidFirstNameError() {
+        let sut = makeSUT()
+        let mockNavigation = MockNavigationController(rootViewController: sut)
+        let router = CreateAccountRouter(navigationController: mockNavigation)
+        sut.router = router
+        sut.btnCreate.sendActions(for: .touchUpInside)
+        let alertController = mockNavigation.presentViewController as? UIAlertController
+        XCTAssertNotNil(alertController)
+        let expectedAlertMessage = "Invalid First Name"
+        let actualAlertMessage = alertController?.message
+        XCTAssertEqual(expectedAlertMessage, actualAlertMessage)
+    }
+    
+    func testCreateAccount_createAccountButtonTapped_mustThrowInvalidLastNameError() {
+        let sut = makeSUT()
+        let mockNavigation = MockNavigationController(rootViewController: sut)
+        let router = CreateAccountRouter(navigationController: mockNavigation)
+        sut.router = router
+        sut.firstNameView.txtTitle.text = "Any"
+        sut.btnCreate.sendActions(for: .touchUpInside)
+        let alertController = mockNavigation.presentViewController as? UIAlertController
+        XCTAssertNotNil(alertController)
+        let expectedAlertMessage = "Invalid Last Name"
+        let actualAlertMessage = alertController?.message
+        XCTAssertEqual(expectedAlertMessage, actualAlertMessage)
     }
     
     // MARK: Helpers

@@ -34,6 +34,9 @@
 		A2672B2D2B9D4165006A5634 /* SplashScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2672B2C2B9D4165006A5634 /* SplashScreenVC.swift */; };
 		A2672B302B9D4198006A5634 /* SplashScreenUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2672B2F2B9D4198006A5634 /* SplashScreenUIComposer.swift */; };
 		A2672B332B9D4F06006A5634 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2672B322B9D4F06006A5634 /* AuthenticationViewModel.swift */; };
+		A2672B352B9E12A9006A5634 /* AccountCreationValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2672B342B9E12A9006A5634 /* AccountCreationValidationService.swift */; };
+		A2672B382B9E1451006A5634 /* CreateAccountRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2672B372B9E1451006A5634 /* CreateAccountRouter.swift */; };
+		A2672B3B2B9E14F4006A5634 /* UIAlertAction+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2672B3A2B9E14F4006A5634 /* UIAlertAction+Extension.swift */; };
 		A2ED5B452B8BA29600C90C99 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ED5B442B8BA29600C90C99 /* CreateAccountVC.swift */; };
 		A2ED5B482B8BA46500C90C99 /* CustomLabelTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ED5B472B8BA46500C90C99 /* CustomLabelTextFieldView.swift */; };
 		A2ED5B4C2B8BA90000C90C99 /* CreateAccountSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ED5B4B2B8BA90000C90C99 /* CreateAccountSnapshotTests.swift */; };
@@ -103,6 +106,9 @@
 		A2672B2C2B9D4165006A5634 /* SplashScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenVC.swift; sourceTree = "<group>"; };
 		A2672B2F2B9D4198006A5634 /* SplashScreenUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenUIComposer.swift; sourceTree = "<group>"; };
 		A2672B322B9D4F06006A5634 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		A2672B342B9E12A9006A5634 /* AccountCreationValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCreationValidationService.swift; sourceTree = "<group>"; };
+		A2672B372B9E1451006A5634 /* CreateAccountRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountRouter.swift; sourceTree = "<group>"; };
+		A2672B3A2B9E14F4006A5634 /* UIAlertAction+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertAction+Extension.swift"; sourceTree = "<group>"; };
 		A2ED5B442B8BA29600C90C99 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		A2ED5B472B8BA46500C90C99 /* CustomLabelTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabelTextFieldView.swift; sourceTree = "<group>"; };
 		A2ED5B4B2B8BA90000C90C99 /* CreateAccountSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountSnapshotTests.swift; sourceTree = "<group>"; };
@@ -203,6 +209,7 @@
 		A21BADB82B791373008D995C /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				A2672B392B9E14E1006A5634 /* Utilities */,
 				A21BADD92B792967008D995C /* ViewManager */,
 				A21BADC02B791CC8008D995C /* swiftgen.yml */,
 				A21BAD882B791322008D995C /* AppDelegate.swift */,
@@ -392,9 +399,26 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		A2672B362B9E1445006A5634 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				A2672B372B9E1451006A5634 /* CreateAccountRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		A2672B392B9E14E1006A5634 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A2672B3A2B9E14F4006A5634 /* UIAlertAction+Extension.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		A2ED5B422B8BA1DC00C90C99 /* CreateAccount */ = {
 			isa = PBXGroup;
 			children = (
+				A2672B362B9E1445006A5634 /* Router */,
 				A2ED5B732B992E3600C90C99 /* ViewModel */,
 				A2ED5B622B8BC76100C90C99 /* Helpers */,
 				A2ED5B432B8BA1EC00C90C99 /* Views */,
@@ -464,6 +488,7 @@
 			children = (
 				A2ED5B632B8BEECA00C90C99 /* CreateAccount.xcstrings */,
 				A2ED5B672B900D1400C90C99 /* CreateAccountConstant.swift */,
+				A2672B342B9E12A9006A5634 /* AccountCreationValidationService.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -644,7 +669,9 @@
 				A2ED5B6D2B939B8900C90C99 /* HomeViewModel.swift in Sources */,
 				A21BAE012B7C6AB0008D995C /* LoginRouter.swift in Sources */,
 				A21BADFE2B7C611B008D995C /* LoginUIComposer.swift in Sources */,
+				A2672B382B9E1451006A5634 /* CreateAccountRouter.swift in Sources */,
 				A21BADBC2B7918D7008D995C /* LoginVC.swift in Sources */,
+				A2672B352B9E12A9006A5634 /* AccountCreationValidationService.swift in Sources */,
 				A2672B332B9D4F06006A5634 /* AuthenticationViewModel.swift in Sources */,
 				A2ED5B682B900D1400C90C99 /* CreateAccountConstant.swift in Sources */,
 				A21BADF62B7B0AF9008D995C /* HomeVC.swift in Sources */,
@@ -654,6 +681,7 @@
 				A21BAD8B2B791322008D995C /* SceneDelegate.swift in Sources */,
 				A2ED5B482B8BA46500C90C99 /* CustomLabelTextFieldView.swift in Sources */,
 				A2ED5B722B939EE800C90C99 /* HomeAPIEndpoint.swift in Sources */,
+				A2672B3B2B9E14F4006A5634 /* UIAlertAction+Extension.swift in Sources */,
 				A21BADED2B798A49008D995C /* LoginEndpoint.swift in Sources */,
 				A21BADFB2B7B0C1D008D995C /* LoginViewModel.swift in Sources */,
 				A21BADE02B79459B008D995C /* CustomButton.swift in Sources */,

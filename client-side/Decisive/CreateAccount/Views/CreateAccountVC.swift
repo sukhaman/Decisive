@@ -15,6 +15,7 @@ class CreateAccountVC: UIViewController {
     var confirmPasswordView = CustomLabelTextFieldView(CreateAccountConstant().confirmPassword, CreateAccountConstant().confirmPasswordPlacholder)
     var btnCreate = CustomButton(backgroundColor: .appDarkBluePrimary, title: CreateAccountConstant().createAccount)
     var viewModel = RegistrationViewModel(service: RegistrationAPIService())
+    var router: CreateAccountRouter?
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,6 +28,9 @@ class CreateAccountVC: UIViewController {
         addPasswordView()
         addConfirmPasswordView()
         addButtonView()
+        if let navigationController {
+            self.router = CreateAccountRouter(navigationController: navigationController)
+        }
     }
     
     fileprivate func addScrollView() {
@@ -147,6 +151,16 @@ class CreateAccountVC: UIViewController {
     }
     
     @objc func buttonCreateAccountTapped(_ sender: UIButton) {
-        self.viewModel.registration(user: UserProfile(firstName: "John", lastName: "Resse", phone: 1239987666, email: "good@test.com",password: "test@1234"))
+        self.createAccountRequest()
+       // self.viewModel.registration(user: UserProfile(firstName: "John", lastName: "Resse", phone: 1239987666, email: "good@test.com",password: "test@1234"))
+    }
+    
+    fileprivate func createAccountRequest() {
+        do {
+            let firstName = try AccountCreationValidationService().validateFirstName(firstNameView.txtTitle.text)
+            let lastName = try AccountCreationValidationService().validateLastName(lastNameView.txtTitle.text)
+        } catch let error {
+            self.router?.showAlert("Error",error.localizedDescription)
+        }
     }
 }
