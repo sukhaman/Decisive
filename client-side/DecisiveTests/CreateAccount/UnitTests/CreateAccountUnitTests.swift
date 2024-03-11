@@ -148,6 +148,41 @@ class CreateAccountUnitTests: XCTestCase {
         XCTAssertEqual(expectedAlertMessage, actualAlertMessage)
     }
     
+    func testCreateAccount_createAccountButtonTapped_mustThrowEnterPasswordError() {
+        let sut = makeSUT()
+        let mockNavigation = MockNavigationController(rootViewController: sut)
+        let router = CreateAccountRouter(navigationController: mockNavigation)
+        sut.router = router
+        sut.firstNameView.txtTitle.text = "Any"
+        sut.lastNameView.txtTitle.text = "Last"
+        sut.phoneView.txtTitle.text = "1234567890"
+        sut.emailView.txtTitle.text = "any@test.com"
+        sut.btnCreate.sendActions(for: .touchUpInside)
+        let alertController = mockNavigation.presentViewController as? UIAlertController
+        XCTAssertNotNil(alertController)
+        let expectedAlertMessage = "Enter Password"
+        let actualAlertMessage = alertController?.message
+        XCTAssertEqual(expectedAlertMessage, actualAlertMessage)
+    }
+    
+    func testCreateAccount_createAccountButtonTapped_mustThrowMisMatchPasswordError() {
+        let sut = makeSUT()
+        let mockNavigation = MockNavigationController(rootViewController: sut)
+        let router = CreateAccountRouter(navigationController: mockNavigation)
+        sut.router = router
+        sut.firstNameView.txtTitle.text = "Any"
+        sut.lastNameView.txtTitle.text = "Last"
+        sut.phoneView.txtTitle.text = "1234567890"
+        sut.emailView.txtTitle.text = "any@test.com"
+        sut.passwordView.txtTitle.text = "anyPassword"
+        sut.btnCreate.sendActions(for: .touchUpInside)
+        let alertController = mockNavigation.presentViewController as? UIAlertController
+        XCTAssertNotNil(alertController)
+        let expectedAlertMessage = "Password and Confirm Password doesn't match"
+        let actualAlertMessage = alertController?.message
+        XCTAssertEqual(expectedAlertMessage, actualAlertMessage)
+    }
+    
     // MARK: Helpers
     
     private func makeSUT() -> CreateAccountVC {

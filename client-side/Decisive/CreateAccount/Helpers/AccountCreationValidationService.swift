@@ -13,6 +13,8 @@ enum AccountCreationError: LocalizedError {
     case invalidPhoneNumber
     case enterValidPhoneNumber
     case invalidEmail
+    case enterPassword
+    case mismatchPassword
     var errorDescription: String? {
         switch self {
         case .invalidFirstName:
@@ -25,6 +27,10 @@ enum AccountCreationError: LocalizedError {
             return "Phone number must be 10 digits"
         case .invalidEmail:
             return "Invalid Email"
+        case .enterPassword:
+            return "Enter Password"
+        case .mismatchPassword:
+            return "Password and Confirm Password doesn't match"
         }
     }
 }
@@ -78,5 +84,18 @@ struct AccountCreationValidationService {
             throw AccountCreationError.invalidEmail
         }
         return email
+    }
+    
+    func validatePassword(_ password: String?, _ confirmPassword: String?) throws -> String {
+        guard let password = password, let confirmPassword = confirmPassword else {
+            throw AccountCreationError.enterPassword
+        }
+        if password.isEmpty {
+            throw AccountCreationError.enterPassword
+        }
+        if password != confirmPassword {
+            throw AccountCreationError.mismatchPassword
+        }
+        return password
     }
 }
