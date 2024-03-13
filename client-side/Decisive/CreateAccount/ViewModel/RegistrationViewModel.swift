@@ -25,7 +25,7 @@ class RegistrationViewModel {
     
         var request = URLRequest(url: LoginEndpoint.registration.url)
         request.httpMethod = "POST"
-        request.allHTTPHeaderFields = [ "Content-Type": "application/json", "Accept": "application/json",]
+        request.allHTTPHeaderFields = [ "Content-Type": "application/json", "Accept": "application/json"]
         request.httpBody = try? JSONEncoder().encode(user)
         let publisher = service.sendLoginRequest(from: request)
         publisher

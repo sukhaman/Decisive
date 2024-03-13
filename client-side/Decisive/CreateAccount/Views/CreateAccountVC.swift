@@ -3,6 +3,7 @@
 //
 
 import UIKit
+import Combine
 
 class CreateAccountVC: UIViewController {
     let scrollView = UIScrollView()
@@ -14,8 +15,13 @@ class CreateAccountVC: UIViewController {
     var passwordView = CustomLabelTextFieldView(CreateAccountConstant().password, CreateAccountConstant().passwordPlacholder)
     var confirmPasswordView = CustomLabelTextFieldView(CreateAccountConstant().confirmPassword, CreateAccountConstant().confirmPasswordPlacholder)
     var btnCreate = CustomButton(backgroundColor: .appDarkBluePrimary, title: CreateAccountConstant().createAccount)
-    var viewModel = RegistrationViewModel(service: RegistrationAPIService())
+    var viewModel: RegistrationViewModel? {
+        didSet {
+            bindServerResponse()
+        }
+    }
     var router: CreateAccountRouter?
+    private var cancellables: Set<AnyCancellable> = []
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -162,8 +168,21 @@ class CreateAccountVC: UIViewController {
             let phoneNumber = try AccountCreationValidationService().validatePhoneNumber(phoneView.txtTitle.text)
             let email = try AccountCreationValidationService().validateEmail(emailView.txtTitle.text)
             let password = try AccountCreationValidationService().validatePassword(passwordView.txtTitle.text, confirmPasswordView.txtTitle.text)
+            let user = UserProfile(firstName: firstName, lastName: lastName, phone: Int(phoneNumber)!, email: email)
+            self.viewModel?.registration(user: user)
         } catch let error {
             self.router?.showAlert("Error",error.localizedDescription)
         }
+    }
+    
+    fileprivate func bindServerResponse() {
+        self.viewModel?.$errorMessage
+            .receive(on: DispatchQueue.main)
+            .sink(receiveValue: { [weak self] error in
+                if let self, let error {
+                    self.router?.showAlert("Error",error)
+                }
+            })
+            .store(in: &cancellables)
     }
 }

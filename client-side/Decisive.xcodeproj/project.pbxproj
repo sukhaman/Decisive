@@ -37,6 +37,8 @@
 		A2672B352B9E12A9006A5634 /* AccountCreationValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2672B342B9E12A9006A5634 /* AccountCreationValidationService.swift */; };
 		A2672B382B9E1451006A5634 /* CreateAccountRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2672B372B9E1451006A5634 /* CreateAccountRouter.swift */; };
 		A2672B3B2B9E14F4006A5634 /* UIAlertAction+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2672B3A2B9E14F4006A5634 /* UIAlertAction+Extension.swift */; };
+		A2672B3E2B9E834E006A5634 /* CreateAccountIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2672B3D2B9E834E006A5634 /* CreateAccountIntegrationTests.swift */; };
+		A2672B412B9E83F9006A5634 /* RegistrationAPIServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2672B402B9E83F9006A5634 /* RegistrationAPIServiceSpy.swift */; };
 		A2ED5B452B8BA29600C90C99 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ED5B442B8BA29600C90C99 /* CreateAccountVC.swift */; };
 		A2ED5B482B8BA46500C90C99 /* CustomLabelTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ED5B472B8BA46500C90C99 /* CustomLabelTextFieldView.swift */; };
 		A2ED5B4C2B8BA90000C90C99 /* CreateAccountSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ED5B4B2B8BA90000C90C99 /* CreateAccountSnapshotTests.swift */; };
@@ -109,6 +111,8 @@
 		A2672B342B9E12A9006A5634 /* AccountCreationValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCreationValidationService.swift; sourceTree = "<group>"; };
 		A2672B372B9E1451006A5634 /* CreateAccountRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountRouter.swift; sourceTree = "<group>"; };
 		A2672B3A2B9E14F4006A5634 /* UIAlertAction+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertAction+Extension.swift"; sourceTree = "<group>"; };
+		A2672B3D2B9E834E006A5634 /* CreateAccountIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountIntegrationTests.swift; sourceTree = "<group>"; };
+		A2672B402B9E83F9006A5634 /* RegistrationAPIServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationAPIServiceSpy.swift; sourceTree = "<group>"; };
 		A2ED5B442B8BA29600C90C99 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		A2ED5B472B8BA46500C90C99 /* CustomLabelTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabelTextFieldView.swift; sourceTree = "<group>"; };
 		A2ED5B4B2B8BA90000C90C99 /* CreateAccountSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountSnapshotTests.swift; sourceTree = "<group>"; };
@@ -415,6 +419,22 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		A2672B3C2B9E833A006A5634 /* IntegrationTests */ = {
+			isa = PBXGroup;
+			children = (
+				A2672B3D2B9E834E006A5634 /* CreateAccountIntegrationTests.swift */,
+			);
+			path = IntegrationTests;
+			sourceTree = "<group>";
+		};
+		A2672B3F2B9E83E3006A5634 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A2672B402B9E83F9006A5634 /* RegistrationAPIServiceSpy.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		A2ED5B422B8BA1DC00C90C99 /* CreateAccount */ = {
 			isa = PBXGroup;
 			children = (
@@ -438,6 +458,8 @@
 		A2ED5B492B8BA8E500C90C99 /* CreateAccount */ = {
 			isa = PBXGroup;
 			children = (
+				A2672B3F2B9E83E3006A5634 /* Helpers */,
+				A2672B3C2B9E833A006A5634 /* IntegrationTests */,
 				A2ED5B5F2B8BC3D200C90C99 /* UnitTests */,
 				A2ED5B4A2B8BA8F100C90C99 /* SnapshotTests */,
 			);
@@ -692,6 +714,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2672B412B9E83F9006A5634 /* RegistrationAPIServiceSpy.swift in Sources */,
 				A21BADE52B797DC8008D995C /* LoginAPIClientStub.swift in Sources */,
 				A21BADF82B7B0B9F008D995C /* MockNavigation.swift in Sources */,
 				A2ED5B612B8BC3E500C90C99 /* CreateAccountUnitTests.swift in Sources */,
@@ -700,6 +723,7 @@
 				A21BADD52B792726008D995C /* XCTestCase+Snapshot.swift in Sources */,
 				A2ED5B6A2B9017B800C90C99 /* Locaized+TestHelpers.swift in Sources */,
 				A21BADD62B79272B008D995C /* UIViewController+Snapshot.swift in Sources */,
+				A2672B3E2B9E834E006A5634 /* CreateAccountIntegrationTests.swift in Sources */,
 				A2ED5B4C2B8BA90000C90C99 /* CreateAccountSnapshotTests.swift in Sources */,
 				A21BADD42B792721008D995C /* LoginSnapshotTests.swift in Sources */,
 			);
